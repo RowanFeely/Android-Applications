@@ -40,7 +40,16 @@ public class Lifecycles extends Activity {
         nonViewDataEditText.setShowSoftInputOnFocus(false);
         persistentDataEditText = (EditText) findViewById(R.id.persistentDataEditText);
         persistentDataEditText.setShowSoftInputOnFocus(false);
+    //**2*
+    // if (savedInstanceState == null ){
+        // nonViewState = "";
+    //}
+    //else{
+        //nonViewState = savedInstanceState.getString(key:"instVar1");
+    //}
 
+    //*3 alt auto*
+    //restoreSharedPreferences();
     }
 
     protected void onStart() {
