@@ -1,5 +1,6 @@
 package edu.monash.fit2081.calculatorapp;
 
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -34,7 +35,33 @@ public class MainActivity extends AppCompatActivity {
         decimalFormat = new DecimalFormat("#.##########");
     }
 
+    public void buttonZeroClick(View v) {
+        interScreen.setText(interScreen.getText() + "0");
+    }
 
+    public void buttonOneClick(View v) {
+        interScreen.setText(interScreen.getText() + "1");
+    }
+
+    public void buttonTwoClick(View v) {
+        interScreen.setText(interScreen.getText() + "2");
+    }
+
+    public void buttonThreeClick(View v) {
+        interScreen.setText(interScreen.getText() + "3");
+    }
+
+    public void buttonFourClick(View v) {
+        interScreen.setText(interScreen.getText() + "4");
+    }
+
+    public void buttonFiveClick(View v) {
+        interScreen.setText(interScreen.getText() + "5");
+    }
+
+    public void buttonSixClick(View v) {
+        interScreen.setText(interScreen.getText() + "6");
+    }
 
     public void buttonSevenClick(View v) {
         interScreen.setText(interScreen.getText() + "7");
@@ -55,30 +82,74 @@ public class MainActivity extends AppCompatActivity {
         } else {
             CURRENT_ACTION = DIVISION;
             resultScreen.setText(decimalFormat.format(valueOne) + "/");
-            interScreen.setText("");
+            interScreen.setText(null);
         }
     }
 
     public void buttonEqualClick(View v) {
-
-        /*
-        * Call ComputeCalculation method
-        * Update the result TextView by adding the '=' char and result of operation
-        * Reset valueOne
-        * Set CURRENT_ACTION to NO_OPERATION
-        * */
+        computeCalculation();
+        CURRENT_ACTION = NO_OPERATION;
+        resultScreen.setText("=" + (valueOne));
+        valueOne = Double.NaN;
+        interScreen.setText(null);
     }
 
     public void buttonClearClick(View v) {
-        /*
-        * if the intermediate TextView has text then
-        *       delete the last character
-        * else
-              * reset valueOne, valueTwo, the content of result TextView,
-              * and the content of intermediate TextView
-        * */
+        String textString = interScreen.getText().toString();
+        if( textString.length() > 0 ) {
+            interScreen.setText(textString.substring(0, textString.length() - 1 ));
+        } else {
+            valueOne = Double.NaN;
+            valueTwo = Double.NaN;
+            interScreen.setText(null);
+            resultScreen.setText(null);
+        }
+        /*if (interScreen.getText() != null) {
+        String str = interScreen.getText().toString();
+        str = str.substring ( 0, str.length() - 1 );
+        interScreen.setText ( str );
+        } else {
+            valueOne = Double.NaN;
+            valueTwo = Double.NaN;
+            interScreen.setText(null);
+            resultScreen.setText(null);
+        }*/
     }
 
+    public void buttonMultiplicationClick(View v) {
+        computeCalculation();
+        if (Double.isNaN(valueOne)) {
+            showToast("Invalid Key");
+        } else {
+            CURRENT_ACTION = MULTIPLICATION;
+            resultScreen.setText((valueOne) + " *");
+            interScreen.setText(null);
+        }
+    }
+
+    public void buttonAdditionClick(View v) {
+        computeCalculation();
+        if (Double.isNaN(valueOne)) {
+            showToast("Invalid Key");
+        } else {
+        CURRENT_ACTION = ADDITION;
+        resultScreen.setText((valueOne) + " +");
+        interScreen.setText(null);
+        }
+    }
+
+    public void buttonSubtractionClick(View v) {
+        computeCalculation();
+        if (Double.isNaN(valueOne)) {
+            showToast("Invalid Key");
+        } else {
+            CURRENT_ACTION = SUBTRACTION;
+            resultScreen.setText((valueOne) + " -");
+            interScreen.setText(null);
+        }
+    }
+    public void buttonDecimalClick(View v) {
+    }
 
     private void computeCalculation() {
 

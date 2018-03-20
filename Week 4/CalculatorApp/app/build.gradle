@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '27.0.3'
+    buildToolsVersion "25.0.2"
     dataBinding.enabled = true
     defaultConfig {
         applicationId "edu.monash.fit2081.calculatorapp"
