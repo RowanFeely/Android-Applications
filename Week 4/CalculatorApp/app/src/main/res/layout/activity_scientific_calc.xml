@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:stretchColumns="*">
+
+        <TableRow android:minHeight="60dp">
+
+            <TextView
+                android:id="@+id/resultScreen"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow android:minHeight="60dp">
+
+            <TextView
+                android:id="@+id/InterScreen"
+                android:layout_height="match_parent"
+                android:layout_below="@id/resultScreen"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:lines="2"
+                android:maxLines="2"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp" />
+        </TableRow>
+
+
+        <TableRow android:minHeight="60dp">
+
+            <Button
+                android:id="@+id/buttonAddition"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/InterScreen"
+                android:layout_centerInParent="false"
+                android:onClick="buttonAdditionClick"
+                android:text="+"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonZero"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/InterScreen"
+                android:layout_centerInParent="false"
+                android:onClick="buttonZeroClick"
+                android:text="0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/InterScreen"
+                android:layout_centerInParent="false"
+                android:onClick="buttonOneClick"
+                android:text="1"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/InterScreen"
+                android:layout_centerInParent="false"
+                android:onClick="buttonTwoClick"
+                android:text="2"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonSine"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonSineClick"
+                android:text="Sin" />
+
+            <Button
+                android:id="@+id/buttonCos"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonCosClick"
+                android:text="Cos" />
+
+        </TableRow>
+
+
+        <TableRow android:minHeight="60dp">
+
+            <Button
+                android:id="@+id/buttonMultiplication"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonMultiplicationClick"
+                android:text="*"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonPeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonThreeClick"
+                android:text="3"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonFour"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonFourClick"
+                android:text="4"
+                android:textSize="20sp" />
+
+
+            <Button
+                android:id="@+id/buttonFive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonFiveClick"
+                android:text="5"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonTan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonTanClick"
+                android:text="TAN" />
+
+            <Button
+                android:id="@+id/buttonAbs"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonAbsClick"
+                android:text="ABS" />
+        </TableRow>
+
+        <TableRow android:minHeight="60dp">
+
+            <Button
+                android:id="@+id/buttonEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonSubtractionClick"
+                android:text="-"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonNineClick"
+                android:text="9"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonPeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonPeriodClick"
+                android:text="."
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonEqualClick"
+                android:text="="
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonSignReverse"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonSignReverseClick"
+                android:text="+-" />
+
+            <Button
+                android:id="@+id/buttonBasicCalc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="openBasicCalc"
+                android:text="BC" />
+        </TableRow>
+
+        <TableRow android:minHeight="60dp">
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonClearClick"
+                android:text="C" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/buttonMemory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonMemoryClick"
+                android:text="M" />
+
+            <Button
+                android:id="@+id/buttonRetrieve"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="buttonRetrieveClick"
+                android:text="R" />
+        </TableRow>
+    </TableLayout>
+</TableLayout>

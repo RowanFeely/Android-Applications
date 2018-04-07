@@ -16,7 +16,7 @@
             android:textColor="@android:color/black"/>
     </TableRow>
 
-    <TableRow  android:minHeight="60dp">
+    <TableRow android:minHeight="60dp">
 
         <TextView
             android:id="@+id/InterScreen"
@@ -26,8 +26,8 @@
             android:gravity="bottom"
             android:lines="2"
             android:maxLines="2"
-            android:textSize="25sp"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp" />
     </TableRow>
 
 
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_below="@id/InterScreen"
-            android:layout_toRightOf="@id/buttonSeven"
+            android:layout_toRightOf="@id/buttonEqual"
             android:onClick="buttonEightClick"
             android:text="8"
             android:textSize="20sp" />
@@ -66,8 +66,8 @@
             android:id="@+id/buttonSlash"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignBaseline="@+id/buttonNine"
-            android:layout_alignBottom="@+id/buttonNine"
+            android:layout_alignBaseline="@+id/buttonEqual"
+            android:layout_alignBottom="@+id/buttonEqual"
             android:layout_alignParentEnd="true"
             android:onClick="buttonDivisionClick"
             android:text="/"
@@ -130,7 +130,7 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/buttonThree"
+            android:id="@+id/buttonPeriod"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:onClick="buttonThreeClick"
@@ -145,12 +145,14 @@
             android:text="-"
             android:textSize="20sp" />
     </TableRow>
+
     <TableRow android:minHeight="60dp">
 
         <Button
-            android:id="@+id/buttonDecimal"
+            android:id="@+id/buttonDot"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:onClick="buttonDotClicked"
             android:text="."
             android:textSize="20sp" />
 
@@ -166,7 +168,7 @@
             android:id="@+id/buttonEqual"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_below="@+id/buttonThree"
+            android:layout_below="@+id/buttonPeriod"
             android:layout_toEndOf="@+id/buttonZero"
             android:onClick="buttonEqualClick"
             android:text="="
@@ -191,5 +193,10 @@
             android:onClick="buttonClearClick"
             android:text="C"
             android:textSize="20sp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="SCI"
+            android:onClick="openCalc" />
     </TableRow>
 </TableLayout>

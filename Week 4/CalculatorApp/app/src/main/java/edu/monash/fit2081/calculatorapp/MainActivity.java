@@ -1,5 +1,6 @@
 package edu.monash.fit2081.calculatorapp;
 
+import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -104,16 +105,6 @@ public class MainActivity extends AppCompatActivity {
             interScreen.setText(null);
             resultScreen.setText(null);
         }
-        /*if (interScreen.getText() != null) {
-        String str = interScreen.getText().toString();
-        str = str.substring ( 0, str.length() - 1 );
-        interScreen.setText ( str );
-        } else {
-            valueOne = Double.NaN;
-            valueTwo = Double.NaN;
-            interScreen.setText(null);
-            resultScreen.setText(null);
-        }*/
     }
 
     public void buttonMultiplicationClick(View v) {
@@ -148,7 +139,9 @@ public class MainActivity extends AppCompatActivity {
             interScreen.setText(null);
         }
     }
-    public void buttonDecimalClick(View v) {
+
+    public void buttonDotClicked(View v) {
+        interScreen.setText(interScreen.getText() + ".");
     }
 
     private void computeCalculation() {
@@ -176,7 +169,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void openCalc(View view) {
+        Intent intent = new Intent(this, ScientificCalc.class);
+        startActivity(intent);
+    }
+
     private void showToast(String text) {
         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
     }
 }
+

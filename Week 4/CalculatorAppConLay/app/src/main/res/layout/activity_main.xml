@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:stretchColumns="*">
+
+
+    <TextView
+        android:id="@+id/resultScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/InterScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultScreen" />
+
+
+    <Button
+        android:id="@+id/buttonSeven"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:onClick="buttonSevenClick"
+        android:text="7"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonOne"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <Button
+        android:id="@+id/buttonEight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonEightClick"
+        android:text="8"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="394dp"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <Button
+        android:id="@+id/buttonNine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonNineClick"
+        android:text="9"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonZero"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <Button
+        android:id="@+id/buttonSlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonDivisionClick"
+        android:text="/"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddition"
+        tools:layout_editor_absoluteY="269dp" />
+
+
+    <Button
+        android:id="@+id/buttonFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonFourClick"
+        android:text="4"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonOne"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <Button
+        android:id="@+id/buttonFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonFiveClick"
+        android:text="5"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="394dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <Button
+        android:id="@+id/buttonSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonSixClick"
+        android:text="6"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonZero"
+        tools:layout_editor_absoluteY="269dp" />
+
+
+    <Button
+        android:id="@+id/buttonMultiplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonMultiplicationClick"
+        android:text="*"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddition"
+        tools:layout_editor_absoluteY="208dp" />
+
+
+    <Button
+        android:id="@+id/buttonOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonOneClick"
+        android:text="1"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="294dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <Button
+        android:id="@+id/buttonTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonTwoClick"
+        android:text="2"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="394dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <Button
+        android:id="@+id/buttonThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonThreeClick"
+        android:text="3"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonZero"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <Button
+        android:id="@+id/buttonSubtraction"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:onClick="buttonSubtractionClick"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddition"
+        tools:layout_editor_absoluteY="331dp" />
+
+
+    <Button
+        android:id="@+id/buttonDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="."
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonOne"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <Button
+        android:id="@+id/buttonZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonZeroClick"
+        android:text="0"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <Button
+        android:id="@+id/buttonEqual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonEqualClick"
+        android:text="="
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="394dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <Button
+        android:id="@+id/buttonAddition"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:onClick="buttonAdditionClick"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="147dp" />
+
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClearClick"
+        android:text="C"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddition"
+        tools:layout_editor_absoluteY="401dp" />
+
+</android.support.constraint.ConstraintLayout>
