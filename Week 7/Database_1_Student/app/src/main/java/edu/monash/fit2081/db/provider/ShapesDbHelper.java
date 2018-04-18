@@ -81,9 +81,10 @@ public class ShapesDbHelper extends SQLiteOpenHelper {
 
     public boolean deleteShape(int shapeID) {
         boolean result = false; //did the delete succeed or not
-
-        //your code here
-
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(SchemeShapes.Shape.TABLE_NAME, SchemeShapes.Shape.ID +"=?", new String[]{Integer.toString(shapeID)});
+        //need content value then call int update use whereargs
+        db.close();
         return result;
     }
 
@@ -98,9 +99,26 @@ public class ShapesDbHelper extends SQLiteOpenHelper {
     //update method requires record data to be packed into a ContentValues data structure
     public boolean updateShape(ShapeValues shape) {
         boolean result = false; //did the edit succeed or not
+        //need to check if column exists
+        //use select to see the cursor return something
+        ContentValues contentValues = new ContentValues();
 
-        //your code here
+        contentValues.put(SchemeShapes.Shape.SHAPE_TYPE, shape.getShapeType());
+        contentValues.put(SchemeShapes.Shape.SHAPE_X, shape.getX());
+        contentValues.put(SchemeShapes.Shape.SHAPE_Y, shape.getY());
+        contentValues.put(SchemeShapes.Shape.SHAPE_RADIUS, shape.getRadius());
+        contentValues.put(SchemeShapes.Shape.SHAPE_WIDTH, shape.getWidth());
+        contentValues.put(SchemeShapes.Shape.SHAPE_HEIGHT, shape.getHeight());
+        contentValues.put(SchemeShapes.Shape.SHAPE_BORDER_THICKNESS, shape.getBorder());
+        contentValues.put(SchemeShapes.Shape.SHAPE_COLOR, shape.getColor());
 
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.update(SchemeShapes.Shape.TABLE_NAME, contentValues,
+                SchemeShapes.Shape.ID +"=?",
+                new String[]{Integer.toString(shape.getId())});
+        //call delete convenience method
+        //use where clause where shapeID is = to shapeID if more than one, delete
+        db.close();
         return result;
     }
 }
