@@ -116,22 +116,33 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.edit_delete_shape) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_bottom, editDeleteShape, "editDeleteFragment").addToBackStack("editDeleteFragment").commit();
             return true;
+        // Lab task 2
+        // when selecting
         } else if (id == R.id.draw_circle) {
             selectedShapeDrawing = "Circle";
             myMenu.getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_circle_white, null));
             myMenu.getItem(1).setIcon(getResources().getDrawable(R.drawable.ic_square_black, null));
             myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_line_black, null));
+            // add two line making from eclipse and line
+            // add two more if here for eclipse and line
         } else if (id == R.id.draw_rectangle) {
             selectedShapeDrawing = "Rectangle";
             myMenu.getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_circle_black, null));
             myMenu.getItem(1).setIcon(getResources().getDrawable(R.drawable.ic_square_white, null));
             myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_line_black, null));
+            // add two line making from eclipse and line
+            // add two more if here for eclipse and line
         } else if (id == R.id.draw_line) {
             selectedShapeDrawing = "Line";
             myMenu.getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_circle_black, null));
             myMenu.getItem(1).setIcon(getResources().getDrawable(R.drawable.ic_square_black, null));
             myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_line_white, null));
-        } else if (id == R.id.delete_all) {
+            // add two line making from eclipse and line
+            // unselect your icons
+        }   // add two more if here for eclipse and line
+            // store the name selected from inside the selectShapeDrawing
+
+        else if (id == R.id.delete_all) {
             deleteAllShapes();
         } else if (id == R.id.show_Color_selector) {
             showSelectColor();

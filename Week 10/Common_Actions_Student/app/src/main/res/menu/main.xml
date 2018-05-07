@@ -7,6 +7,11 @@
         android:title=""
         app:showAsAction="always"
         />
+    <!-- Lab task 2
+    Change show as action to never
+    Need two icons for white and black
+    need to go to mainactivity and add two element to each  -->
+
     <item
         android:id="@+id/draw_rectangle"
         android:icon="@drawable/ic_square_black"

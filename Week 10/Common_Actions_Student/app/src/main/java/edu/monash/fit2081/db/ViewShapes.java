@@ -68,11 +68,18 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
                             storeShape("Circle", x, y, dX, dY);
                         }
                         break;
+                    // Lab task 1 -->
                     case MotionEvent.ACTION_UP:
                         if (!selectedShapeDrawing.equals("Line")) {
+                            // adjust your mlasttouchx and mlasttouchy
+                            // starting point as the smallest one for y axis
+                            // starting point as largest one for x axis
                             dX = Math.abs(x - mLastTouchX); dY = Math.abs(y - mLastTouchY);
                             storeShape(selectedShapeDrawing, mLastTouchX, mLastTouchY, dX, dY);
                         }
+                        // dont need to do anything for eclipse here
+                        // add another if here for line only
+                        // remove the absolute and store as it is
                         break;
                 }
                 return true;
