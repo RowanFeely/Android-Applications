@@ -45,7 +45,8 @@ public class CountryDetails extends AppCompatActivity {
 
         /* lab task
          showWiki = (Button) findViewById(R.id.wiki_button);
-         showWiki.setText
+         showWiki.setText("Wiki "+ selectedCountry);
+         showWiki.setOnClickListener((v) ->
 
          */
         new GetCountryDetails().execute(selectedCountry);
@@ -55,9 +56,13 @@ public class CountryDetails extends AppCompatActivity {
     private class GetCountryDetails extends AsyncTask<String, String, CountryInfo> {
 
         @Override
-        protected CountryInfo doInBackground(String... params) {
+        protected CountryInfo doInBackground(String... params) { //Non-UI (background thread) cannot access any UI element
             CountryInfo countryInfo = null;
             try {
+                for(int i=0;i<10;i++) {
+                    //download URL
+                    // publishProgress(String.to   );
+                    }
                 // Create URL
                 String selectedCountry = params[0];
                 URL webServiceEndPoint = new URL("https://restcountries.eu/rest/v2/name/" + selectedCountry); //
@@ -113,7 +118,7 @@ public class CountryDetails extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(CountryInfo countryInfo) {
+        protected void onPostExecute(CountryInfo countryInfo) { // UI thread
             super.onPostExecute(countryInfo);
             name.setText(countryInfo.getName());
             capital.setText(countryInfo.getCapital());
