@@ -123,23 +123,46 @@ public class MainActivity extends AppCompatActivity {
             myMenu.getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_circle_white, null));
             myMenu.getItem(1).setIcon(getResources().getDrawable(R.drawable.ic_square_black, null));
             myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_line_black, null));
-            // add two line making from eclipse and line
-            // add two more if here for eclipse and line
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_straightline_black));
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_eclipse_black));
         } else if (id == R.id.draw_rectangle) {
             selectedShapeDrawing = "Rectangle";
             myMenu.getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_circle_black, null));
             myMenu.getItem(1).setIcon(getResources().getDrawable(R.drawable.ic_square_white, null));
             myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_line_black, null));
-            // add two line making from eclipse and line
-            // add two more if here for eclipse and line
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_straightline_black));
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_eclipse_black));
         } else if (id == R.id.draw_line) {
             selectedShapeDrawing = "Line";
             myMenu.getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_circle_black, null));
             myMenu.getItem(1).setIcon(getResources().getDrawable(R.drawable.ic_square_black, null));
             myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_line_white, null));
-            // add two line making from eclipse and line
-            // unselect your icons
-        }   // add two more if here for eclipse and line
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_straightline_black));
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_eclipse_black));
+        } else if (id == R.id.draw_eclipse) {
+            selectedShapeDrawing = "Eclipse";
+            myMenu.getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_circle_black, null));
+            myMenu.getItem(1).setIcon(getResources().getDrawable(R.drawable.ic_square_black, null));
+            myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_line_white, null));
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_straightline_black));
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_eclipse_white));
+
+        } else if (id == R.id.draw_straight_line) {
+            selectedShapeDrawing = "StraightLine";
+            myMenu.getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_circle_black, null));
+            myMenu.getItem(1).setIcon(getResources().getDrawable(R.drawable.ic_square_black, null));
+            myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_line_white, null));
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_straightline_white));
+            // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_eclipse_black));
+
+        else if (id == R.id.draw_line) {
+                        selectedShapeDrawing = "Line";
+                        myMenu.getItem(0).setIcon(getResources().getDrawable(R.drawable.ic_circle_black, null));
+                        myMenu.getItem(1).setIcon(getResources().getDrawable(R.drawable.ic_square_black, null));
+                        myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_line_white, null));
+                        // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_straightline_black));
+                        // myMenu.getItem(2).setIcon(getResources().getDrawable(R.drawable.ic_eclipse_black));
+        }
             // store the name selected from inside the selectShapeDrawing
 
         else if (id == R.id.delete_all) {

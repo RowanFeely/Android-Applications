@@ -13,6 +13,18 @@
     need to go to mainactivity and add two element to each  -->
 
     <item
+        android:id="@+id/draw_eclipse"
+        android:icon="@drawable/ic_eclipse_black"
+        android:title=""
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/draw_straight_line"
+        android:icon="@drawable/ic_straightline_black"
+        android:title=""
+        app:showAsAction="always"/>
+
+    <item
         android:id="@+id/draw_rectangle"
         android:icon="@drawable/ic_square_black"
         android:title=""
@@ -21,7 +33,7 @@
         android:id="@+id/draw_line"
         android:icon="@drawable/ic_line_black"
         android:title=""
-        app:showAsAction="always"/>
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/show_Color_selector"

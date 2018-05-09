@@ -45,13 +45,12 @@ public class CustomView extends View {
 
             if (shapes[i].getShapeType().equals("Circle"))
                 canvas.drawCircle(shapes[i].getX(), shapes[i].getY(), shapes[i].getRadius(), paint);
-            else
-                // neeed to put condition here
+            else if (shapes[i].getShapeType().equals("Rectangle"))
                 canvas.drawRect(shapes[i].getX(), shapes[i].getY(), shapes[i].getX() + shapes[i].getWidth(), shapes[i].getY() + shapes[i].getHeight(), paint);
+           // else if (shapes[i].getShapeType().equals("Eclipse"))
+              //  canvas.drawOval(shapes[i].getX(), shapes[i].getY(), shapes[i].getRadius(), paint);
+            //else if (shapes[i].getShapeType().equals("StraightLine"))
+                //canvas.drawLine(shapes[i].getX(), shapes[i].getY(), paint);
         }
-        // if the shape is line,  need to draw line
-        // canvas.drawLine();
-        // canvas.draweclipse();
-        // if shape is eclipse need to draw eclipse
     }
 }

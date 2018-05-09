@@ -29,6 +29,8 @@ import static edu.monash.fit2081.db.provider.SchemeShapes.Shape;
 public class ViewShapes extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
 //    int dX;
 //    int dY;
+    int startX;
+    int startY;
     int mLastTouchX;
     int mLastTouchY;
     ContentResolver resolver;
@@ -58,29 +60,35 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
                 int dX, dY;
 
                 int action = MotionEventCompat.getActionMasked(ev);
-                switch (action){
+                switch (action) {
                     case MotionEvent.ACTION_DOWN:
-                        mLastTouchX = x; mLastTouchY = y;
+                        mLastTouchX = x;
+                        mLastTouchY = y;
                         break;
                     case MotionEvent.ACTION_MOVE:
                         if (selectedShapeDrawing.equals("Line")) {
-                            dX = 5; dY = 5;
+                            dX = 5;
+                            dY = 5;
                             storeShape("Circle", x, y, dX, dY);
                         }
                         break;
                     // Lab task 1 -->
                     case MotionEvent.ACTION_UP:
                         if (!selectedShapeDrawing.equals("Line")) {
-                            // adjust your mlasttouchx and mlasttouchy
+                            // adjust  mlasttouchx and mlasttouchy
                             // starting point as the smallest one for y axis
                             // starting point as largest one for x axis
-                            dX = Math.abs(x - mLastTouchX); dY = Math.abs(y - mLastTouchY);
+                            dX = Math.abs(mLastTouchX - x);
+                            dY = Math.abs(y - mLastTouchY);
                             storeShape(selectedShapeDrawing, mLastTouchX, mLastTouchY, dX, dY);
-                        }
-                        // dont need to do anything for eclipse here
-                        // add another if here for line only
-                        // remove the absolute and store as it is
+                        } else
+                            storeShape(selectedShapeDrawing, mLastTouchX, mLastTouchY, startX, startY);
                         break;
+                            // leaving only straight line left to be selected
+                            // add another if here for line only
+                            // remove the absolute and store as it is
+
+
                 }
                 return true;
             }
