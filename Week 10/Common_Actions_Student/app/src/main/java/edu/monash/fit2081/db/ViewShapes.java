@@ -78,8 +78,12 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
                             // adjust  mlasttouchx and mlasttouchy
                             // starting point as the smallest one for y axis
                             // starting point as largest one for x axis
-                            dX = Math.abs(mLastTouchX - x);
+                            // dX = Math.abs(mLastTouchX - x);
+                            // dY = Math.abs(y - mLastTouchY);
+                            dX = Math.abs(x - mLastTouchX);
                             dY = Math.abs(y - mLastTouchY);
+
+
                             storeShape(selectedShapeDrawing, mLastTouchX, mLastTouchY, dX, dY);
                         } else
                             storeShape(selectedShapeDrawing, mLastTouchX, mLastTouchY, startX, startY);
