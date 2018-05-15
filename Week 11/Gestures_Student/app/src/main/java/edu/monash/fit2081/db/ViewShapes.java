@@ -226,7 +226,7 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
 
         //this callback, draws the standard shape for the selected shapes
         @Override
-        public boolean onDoubleTap(MotionEvent e) {
+        public boolean onDoubleTap(MotionEvent e) { // set gestureInProgress to false (FOR ALL METHODS)
             storeShape(selectedShapeDrawing, (int) e.getX(), (int) e.getY(), 50, 50);
             //return super.onDoubleTap(e);
             return true;
@@ -238,6 +238,29 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
             //Log.d(DEBUG_TAG, "onLongPress");
             super.onLongPress(e);
             isLongAndDrag = true;
+        }
+
+        /*  @override
+        @ public boolean onSingleTapConfirmed(MotionEvent e) {
+        if (firstTap) {
+        if (e.getX) < 0.25 * customview
+        */
+
+        //gestureInProgress = True
+        // override onSingleTapConfirm(MotionEvent e)
+        {
+            // get x and y co-ordinate from MotionEvent e
+            // customView holds size of display
+            // customView.Width()
+            // customView.getHeight()
+            // if x > width/4 and y > height/4  and gestureInProgress = False
+                // then gestureInProgress = True
+            // if  x > 0.75 x width and y > height > 0.75 and gestureInProgress = true
+                // resolver.delete(SchemeShapes.Shape.CONTENT_URI, null, null);
+                // set gestureInProgress = False
+            // else
+                // gestureInProgress = False
+
         }
     }
 
