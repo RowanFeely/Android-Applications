@@ -50,6 +50,9 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
     //other
     String selectedShapeDrawing = "Circle"; //default
 
+    private boolean gestureInProgress = false;
+    private boolean firstTap = true;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -240,27 +243,20 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
             isLongAndDrag = true;
         }
 
-        /*  @override
-        @ public boolean onSingleTapConfirmed(MotionEvent e) {
-        if (firstTap) {
-        if (e.getX) < 0.25 * customview
-        */
-
-        //gestureInProgress = True
-        // override onSingleTapConfirm(MotionEvent e)
-        {
-            // get x and y co-ordinate from MotionEvent e
-            // customView holds size of display
-            // customView.Width()
-            // customView.getHeight()
-            // if x > width/4 and y > height/4  and gestureInProgress = False
-                // then gestureInProgress = True
-            // if  x > 0.75 x width and y > height > 0.75 and gestureInProgress = true
-                // resolver.delete(SchemeShapes.Shape.CONTENT_URI, null, null);
-                // set gestureInProgress = False
-            // else
-                // gestureInProgress = False
-
+        @Override
+        public boolean onSingleTapConfirmed(MotionEvent e) {
+            if (firstTap) {
+                if ((e.getX()) < 0.25 * customView.getWidth() && ((e.getY() < 0.25 * customView.getHeight()) && (gestureInProgress == false)) {
+                    gestureInProgress = true;
+                    firstTap = false;
+                } else if ((e.getX()) < 0.75 * customView.getWidth() && ((e.getY() < 0.75 * customView.getHeight()) && (gestureInProgress == true))
+                {
+                    resolver.delete(Shape.CONTENT_URI, null, null);
+                    gestureInProgress = false;
+                } else {
+                    gestureInProgress = false;
+                }
+            }
         }
     }
 
