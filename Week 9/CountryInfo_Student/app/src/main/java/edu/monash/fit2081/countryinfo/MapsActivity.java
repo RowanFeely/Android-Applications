@@ -27,7 +27,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     SupportMapFragment mapFragment;
 
     @Override
-    ted void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
@@ -37,7 +37,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-    }
     }
 
     /**
@@ -62,7 +61,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 //save current location
                 String msg;
                 boolean actionFlag;
-                String selectedCountry = getIntent().getStringExtra;
+                String selectedCountry = "";
 
 
                 List<Address> addresses = new ArrayList<>();
@@ -85,7 +84,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     msg = "Do you want more details about " + address.getCountryName() + "?";
                     actionFlag = true;
                 }
-                //datatype output = (condition)?Value if true : value if false;
+
                 Snackbar.make(mapFragment.getView(), msg, Snackbar.LENGTH_LONG).setAction("Details", (actionFlag) ? (new ActionOnClickListener(selectedCountry)) : null).show();
             }
         });
