@@ -26,8 +26,8 @@ public class CountryDetails extends AppCompatActivity {
     private TextView code;
     private TextView population;
     private TextView area;
-    @Override
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_country_details);

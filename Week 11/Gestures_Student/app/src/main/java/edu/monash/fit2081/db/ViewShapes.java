@@ -65,7 +65,7 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         customView = new CustomView(getContext());
         mDetector = new GestureDetector(getContext(), new MyGestureListener());
-        mScaleDetector = new ScaleGestureDetector(getContext(), new myScaleListener());
+        mScaleDetector = new ScaleGestureDetector(getContext(), new mysalelistener());
 
         //***
         customView.setOnTouchListener(new View.OnTouchListener() {
@@ -242,7 +242,7 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
             super.onLongPress(e);
             isLongAndDrag = true;
         }
-
+        /*
         @Override
         public boolean onSingleTapConfirmed(MotionEvent e) {
             if (firstTap) {
@@ -259,7 +259,7 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
             }
         }
     }
-
+    */
     private class myScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         float scale = 1.0f;
 
@@ -351,6 +351,8 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
         Cursor cursor = resolver.query(Shape.CONTENT_URI, Shape.PROJECTION, null, null, Shape.ID + " DESC LIMIT 1");
         return cursor;
     }
-}
+}}
+
+
 
 
