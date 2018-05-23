@@ -34,6 +34,8 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
 
     private int mLastTouchX;
     private int mLastTouchY;
+    private int mStartX;
+    private int mStartY;
     private ContentResolver resolver;
 
     public static CustomView customView = null;

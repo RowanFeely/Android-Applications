@@ -65,7 +65,7 @@ public class ViewShapes extends Fragment implements LoaderManager.LoaderCallback
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         customView = new CustomView(getContext());
         mDetector = new GestureDetector(getContext(), new MyGestureListener());
-        mScaleDetector = new ScaleGestureDetector(getContext(), new mysalelistener());
+        mScaleDetector = new ScaleGestureDetector(getContext(), new myScaleListener());
 
         //***
         customView.setOnTouchListener(new View.OnTouchListener() {

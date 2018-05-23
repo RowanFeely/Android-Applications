@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         int width, height;
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(android.R.layout.activity_main.activity_main);
 
         // to be used by delete all shapes
         resolver = getApplicationContext().getContentResolver();
